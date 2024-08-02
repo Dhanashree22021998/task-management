@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Confirm</title>
+{%  endblock %}
+
+
+{% block content %}
+<div class = "container">
+    <form method = "post">
+        {% csrf_token %}
+        <h2> Do you want to delete<span style = "color:red"> {{obj.eid}}</span> Record ?</h2>
+        <input type = "submit" value = "Yes" class = "btn btn-danger">
+        <a href = "/v1/s1/" class="btn btn-success">No</a>
+    </form>
+
+
+
+
+</div>
+
+{% endblock %}
